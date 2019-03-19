@@ -10,14 +10,16 @@ export class Address {
 
   // region Default Methods
   constructor(args?) {
-    if (args !== null) {
+    if (args) {
+
       this.streetNumber = args.streetNumber;
       this.streetName = args.streetName;
       this.city = args.city;
       this.province = args.province;
       this.postalCode = args.postalCode;
       this.country = args.country;
+
     }
+    // endregion
   }
-  // endregion
 }

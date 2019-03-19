@@ -21,15 +21,7 @@ export class Restaurant {
       this.phone = args.phone;
       this.rating = args.rating;
       this.avgMealPrice = args.avgMealPrice;
-
-      this.location = new Address({})
-      this.location.streetNumber =args.location.streetNumber;
-      this.location.streetName =  args.location.streetName;
-      this.location.city =  args.location.city;
-      this.location.province = args.location.province;
-      this.location.postalCode = args.location.postalCode;
-      this.location.country = args.location.country;
-
+      this.location = args.location;
     }
   }
   // endregion

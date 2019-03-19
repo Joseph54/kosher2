@@ -1,22 +1,24 @@
-<mat-card>
+<mat-card class="size">
   <mat-card-header>
     <mat-card-title> {{restaurant.name | uppercase}}</mat-card-title>
     <mat-card-subtitle>
-      <span *ngIf="restaurant.phone"> T: <a href="tel:{{restaurant.name}}">{{restaurant.phone}}</a></span>
-      <span *ngIf="restaurant.website">W:<a href="{{restaurant.website}}" target="blank">{{restaurant.name}}</a></span>
+      <span *ngIf="restaurant.phone" > Telephone : <a href="tel:{{restaurant.name}}">{{restaurant.phone}} </a></span>
+      <span *ngIf="restaurant.website"> Website :<a href="{{restaurant.website}}" target="blank">{{restaurant.name}}</a></span>
     </mat-card-subtitle>
   </mat-card-header>
   <mat-card-content><br>
+    <!-- if or not if it work anyway -->
     <p *ngIf="restaurant.location">Address: <br>
-      <span *ngIf="restaurant.location.streetNumber">{{restaurant.location.streetNumber}}</span>
-      <span *ngIf="restaurant.location.streetName">{{restaurant.location.streetName}}</span>
-      <span *ngIf="restaurant.location.city">{{restaurant.location.city}}</span>
-      <span *ngIf="restaurant.location.province">{{restaurant.location.province}}</span>
-      <span *ngIf="restaurant.location.postalCode">{{restaurant.location.postalCode}}</span>
-      <span *ngIf="restaurant.location.country">{{restaurant.location.country}}</span>
+      <span *ngIf="restaurant.location.streetName">{{restaurant.location.streetNumber}}</span><br>
+      <span *ngIf="restaurant.location.streetName">{{restaurant.location.streetName}}</span><br>
+      <span *ngIf="restaurant.location.city">{{restaurant.location.city}}</span><br>
+      <span *ngIf="restaurant.location.province">{{restaurant.location.province}}</span><br>
+      <span *ngIf="restaurant.location.postalCode">{{restaurant.location.postalCode}}</span><br>
+      <span *ngIf="restaurant.location.country">{{restaurant.location.country}}</span><br>
       <br>
       Rating: {{restaurant.rating}} <br>
-      Price Range: {{restaurant.avgMealPrice}}
+      Price Range: {{restaurant.avgMealPrice}}<br>
+      review: {{restaurant.reviews}}
     </p>
   </mat-card-content>
 </mat-card>
